@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email confirmation</title>
+</head>
+<body>
+    {% autoescape off %}
+
+    <h1>Welcome to ADi meals mobile!</h1><br><br>
+
+    <p>Hello {{name | capfirst}},</p><br><br>
+    
+    <p>Please confirm your email by clicking on the link below.</p><br><br>
+    
+    <p>Confirmation link: <a http://{{domain}} href= "{% url 'authentication:activate' uidb64=uid token=token %}">Click me</a></p>
+    
+
+    {% endautoescape %}
+   </body>
+</html>
+

@@ -1,0 +1,140 @@
+h1{
+    font-family: "Bangers";
+    font-size: 100px;
+    color: lawngreen;
+    text-align: center;
+    margin-top: 100px;  
+}
+
+#success{
+    padding-left: 10ch;
+    padding-right: 10ch;
+    padding-top: 10ch;
+    padding-bottom: 10ch;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    font-weight: 450;
+    border-color: black;
+    background-color: grey;
+    color: white;
+    margin: 100px;
+    margin-left: 100px;
+    margin-right: 200px;
+    margin-bottom: 500px; 
+}
+
+
+.btn-primary{
+    padding-left: 10ch;
+    padding-right: 10ch;
+    padding-top: 10ch;
+    padding-bottom: 10ch;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    font-weight: 450;
+    border-color: black;
+    background-color: grey;
+    color: white;
+    margin-top: 0px;
+    margin: 100px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 500px;
+}
+
+
+.btn-secondary{
+    margin-left: 1300px;
+}
+
+p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    color: orangered;
+    font-size: 35px;
+}
+
+body{
+background-color: black;
+}
+
+.container-fluid{
+    background-color: green;
+}
+
+.block{
+    background-color: darkgrey;
+}
+
+
+#pone{
+    margin-left: 50px;
+    margin-right: 0px;
+}
+
+#ptwo{
+    margin-top: 0px;
+    margin-left: 550px;
+    margin-right: 0px;
+    margin-bottom: 250px;
+}
+
+#pthree{
+    margin-left: 1050px;
+    margin-right: 0px;
+}
+
+#pfour{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#pfive{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#psix{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.navbar-toggler{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: darkgrey;
+}
+
+.navbar-toggler-icon{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 5ch;
+    padding-left: 5ch;
+}
+
+#signout{
+    margin-top: 5px;
+    margin-right: 0px;
+    margin-left: 1600px;
+    margin-bottom: 5px;
+    background-color: red;
+    padding-left: 5ch;
+    padding-right: 5ch;
+    padding-top: 2ch;
+    padding-bottom: 2ch;
+}
+
+#signout :hover{
+    color: greenyellow;
+}
+
+#cart{
+    margin-top: 5px;
+    margin-right: 0px;
+    margin-left:0px;
+    margin-bottom: 5px;
+    padding-left: 3ch;
+    padding-right: 3ch;
+    padding-top: 1ch;
+    padding-bottom: 1ch;
+}

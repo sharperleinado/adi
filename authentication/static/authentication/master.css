@@ -1,0 +1,17 @@
+h1{
+    font-family: "Bangers";
+    font-size: 100px;
+    color: lawngreen;
+    text-align: center;    
+}
+
+.btn-success{
+    color: black;
+    background-color: yellowgreen;
+    }
+
+
+.btn-success:hover{
+    color: black;
+    background-color: yellowgreen;
+    }

@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search box</title>
+</head>
+<body>
+
+    
+{% if searched %}
+{% if food %}
+<br><br><h1><center>Search result found!</center></h1><br><br><br>
+{% for item in food %}
+<center><a href= "{% url 'food_app:food_search' slug=item.slug %}"><li>{{item.food_item | capfirst}}</li></a></center>
+{% endfor %}
+
+{% elif soup %}
+<br><br><h1><center>Search result found!<center></h1><br><br><br> 
+{% for item in soup %}
+<center><a href= "{% url 'food_app:food_search' slug=item.slug %}"><li>{{item.soup_item | capfirst}}</li></a></center>
+{% endfor %}
+
+{% else %}
+<br><br><h1><center>Search result not found!</center></h1><br><br><br>
+<br><br><h3><center>We've searched our boxes, but couldn't find the meal you searched for.....</center></h3>
+
+{% endif %}
+{% else %}
+<br><br><h1><center>Ooooooooops! You forgot to search for an item.<center></h1><br><br><br> 
+{% endif %}
+
+   </body>
+</html>

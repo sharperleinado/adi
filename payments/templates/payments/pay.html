@@ -1,0 +1,137 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'food_app/master.css' %}">
+    <title>Payment</title>
+</head>
+<body>
+
+{% if user.is_authenticated %}
+
+<div class="container">
+<br><h1><center>Pay here!</center></h1><br>
+{#Here, this is the rendered template for "payment view". it takes in two arguments which are: price and slug #}
+{#I used if-statements to diffrentiate the type of price and slug request by the user, and render that particular price and slug item.#}
+
+{#food box#}
+{% if price == item.2 and slug == item.3 %}
+<img src={{item.0.url}} class="img-fluid"><br><br>
+<h2>{{item.1|capfirst}}</h2>
+<h3>₦{{item.2}}</h3><br>
+
+<p><strong style = "color:red;">Payment Information</strong></p>
+<p><strong style = "color:red;">Name and e-mail can be left blank, and will be autofilled with your registered name and e-mail.</strong></p>
+<form action="{% url 'payments:payment_api' %}" method="POST">
+{% csrf_token %}
+{{form.as_p}}
+<button type="submit" class="btn btn-success"><strong>Proceed to pay!</strong></button><br><br><br><br>
+</form>
+{% endif %}
+
+
+{#for soup box#}
+{#Image#}
+{% if price == 11 and slug == item2.5 %}
+<img src={{item2.0.url}} class="img-fluid"><br><br>
+<h2>{{item2.1|capfirst}}</h2>
+<p>Mini box</p>
+<h3>₦{{item2.2}}</h3><br>
+
+<p><strong style = "color:red;">Payment Information</strong></p>
+<p><strong style = "color:red;">Name and e-mail can be left blank, and will be autofilled with your registered name and e-mail.</strong></p>
+<form action="{% url 'payments:payment_api' %}" method="POST">
+{% csrf_token %}
+{{form.as_p}}
+<button type="submit" class="btn btn-success"><strong>Proceed to pay!</strong></button><br><br><br><br><br><br><br>
+</form>
+
+
+<img src={{item2.0.url}} class="img-fluid"><br><br>
+<h2>{{item2.1|capfirst}}</h2>
+<p>Medium box</p>
+<h3>₦{{item2.3}}</h3><br>
+
+<p><strong style = "color:red;">Payment Information</strong></p>
+<p><strong style = "color:red;">Name and e-mail can be left blank, and will be autofilled with your registered name and e-mail.</strong></p>
+<form action="{% url 'payments:payment_api' %}" method="POST">
+{% csrf_token %}
+{{form.as_p}}
+<button type="submit" class="btn btn-success"><strong>Proceed to pay!</strong></button><br><br><br><br><br><br><br>
+</form>
+
+
+<img src={{item2.0.url}} class="img-fluid"><br><br>
+<h2>{{item2.1|capfirst}}</h2>
+<p>Mega box</p>
+<h3>₦{{item2.4}}</h3><br>
+
+<p><strong style = "color:red;">Payment Information</strong></p>
+<p><strong style = "color:red;">Name and e-mail can be left blank, and will be autofilled with your registered name and e-mail.</strong></p>
+<form action="{% url 'payments:payment_api' %}" method="POST">
+{% csrf_token %}
+{{form.as_p}}
+<button type="submit" class="btn btn-success"><strong>Proceed to pay!</strong></button><br><br><br><br><br><br><br>
+</form>
+
+
+{% elif price == item2.2 and slug == item2.5 %}
+{#Mini box#}
+<img src={{item2.0.url}} class="img-fluid"><br><br>
+<h2>{{item2.1|capfirst}}</h2>
+<p>Mini box</p>
+<h3>₦{{item2.2}}</h3><br>
+
+<p><strong style = "color:red;">Payment Information</strong></p>
+<p><strong style = "color:red;">Name and e-mail can be left blank, and will be autofilled with your registered name and e-mail.</strong></p>
+<form action="{% url 'payments:payment_api' %}" method="POST">
+{% csrf_token %}
+{{form.as_p}}
+<button type="submit" class="btn btn-success"><strong>Proceed to pay!</strong></button><br><br><br><br><br><br><br>
+</form>
+
+
+{% elif price == item2.3 and slug == item2.5 %}
+{#Medium box#}
+<img src={{item2.0.url}} class="img-fluid"><br><br>
+<h2>{{item2.1|capfirst}}</h2>
+<p>Medium box</p>
+<h3>₦{{item2.3}}</h3><br>
+
+<p><strong style = "color:red;">Payment Information</strong></p>
+<p><strong style = "color:red;">Name and e-mail can be left blank, and will be autofilled with your registered name and e-mail.</strong></p>
+<form action="{% url 'payments:payment_api' %}" method="POST">
+{% csrf_token %}
+{{form.as_p}}
+<button type="submit" class="btn btn-success"><strong>Proceed to pay!</strong></button><br><br><br><br><br><br><br>
+</form>
+
+
+{% elif price == item2.4 and slug == item2.5 %}
+{#Mega box#}
+<img src={{item2.0.url}} class="img-fluid"><br><br>
+<h2>{{item2.1|capfirst}}</h2>
+<p>Mega box</p>
+<h3>₦{{item2.4}}</h3><br>
+
+<p><strong style = "color:red;">Payment Information</strong></p>
+<p><strong style = "color:red;">Name and e-mail can be left blank, and will be autofilled with your registered name and e-mail.</strong></p>
+<form action="{% url 'payments:payment_api' %}" method="POST">
+{% csrf_token %}
+{{form.as_p}}
+<button type="submit" class="btn btn-success"><strong>Proceed to pay!</strong></button><br><br><br><br><br><br><br>
+</form>
+
+{% endif %}
+
+{% endif %}
+
+    </body>
+</html>

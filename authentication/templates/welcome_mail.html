@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome mail</title>
+</head>
+<body>
+    {% autoescape off %}
+
+    <h1>Welcome to ADi meals mobile!</h1><br><br>
+    
+
+    <p>Hello {{name | capfirst}},</p><br>
+     
+    <p>Welcome to ADi meals mobile! Thank you for visiting our website. We have also sent you a confirmation email, please confirm your email address to login into your account.</p><br>
+
+    <p>Thanking you.</p>
+
+    {% endautoescape %}
+
+   </body>
+</html>
+
